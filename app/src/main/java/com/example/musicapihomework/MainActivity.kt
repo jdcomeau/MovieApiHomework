@@ -1,4 +1,4 @@
-package com.example.musicapihomework.viewmodel
+package com.example.musicapihomework
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

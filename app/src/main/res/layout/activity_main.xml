@@ -1,19 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewmodel.MainActivity">
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/b_rock"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="@drawable/ic_baseline_house_blue_24"
+        app:layout_constraintEnd_toStartOf="@+id/b_classic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="term=rock"/>
+
+    <Button
+        android:id="@+id/b_classic"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="@drawable/ic_baseline_dashboard_blue_24"
+        app:layout_constraintEnd_toStartOf="@+id/b_pop"
+        app:layout_constraintStart_toEndOf="@+id/b_rock"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="term=classick"/>
+
+    <Button
+        android:id="@+id/b_pop"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="@drawable/ic_baseline_notifications_blue_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_classic"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="term=pop"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/tv_rock"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:text="@string/rock"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/tv_classic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_rock" />
+
+    <TextView
+        android:id="@+id/tv_classic"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:text="@string/classic"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/b_rock"
+        app:layout_constraintRight_toLeftOf="@id/b_pop"
+        app:layout_constraintTop_toBottomOf="@id/b_classic" />
+
+    <TextView
+        android:id="@+id/tv_pop"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:text="@string/pop"
+        android:textSize="25sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_classic"
+        app:layout_constraintTop_toBottomOf="@id/b_pop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

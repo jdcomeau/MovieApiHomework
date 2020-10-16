@@ -1,4 +1,4 @@
-package com.example.musicapihomework.viewmodel
+package com.example.musicapihomework.view
 
 import android.view.LayoutInflater
 import android.view.View
